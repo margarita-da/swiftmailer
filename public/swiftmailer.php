@@ -5,8 +5,8 @@ try {
 
 // Create the Transport
     $transport = (new \Swift_SmtpTransport('smtp.mail.ru', 465, 'ssl'))
-        ->setUsername('ritka15@mail.ru')
-        ->setPassword('2315')
+        ->setUsername('')// указать свою почту
+        ->setPassword('') //указать свой пароль от почты
     ;
 
 // Create the Mailer using your created Transport
@@ -14,8 +14,8 @@ try {
 
 // Create a message
     $message = (new \Swift_Message('Wonderful Subject'))
-        ->setFrom(['ritka15@mail.ru' => 'ritka15@mail.ru'])
-        ->setTo(['ritka15@mail.ru'])
+        ->setFrom(['' => '']) //почта отправителя
+        ->setTo(['']) // почта получателя
         ->setBody('Here is the message itself')
     ;
 
